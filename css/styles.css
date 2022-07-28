@@ -148,6 +148,7 @@ p, ul {
 .email-icon {
     align-items: center;
     fill: currentColor;
+    margin-right: 5px;
 
 }
 .auth-email:hover,
@@ -238,8 +239,7 @@ p, ul {
 
 .container {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 
@@ -256,12 +256,14 @@ p, ul {
 
 .hero {
     text-align: center;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
 
     background-color: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     
 }
 
@@ -277,7 +279,6 @@ p, ul {
 
 .hero-button {
     padding: 10px 32px;
-    min-width: 130px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -285,8 +286,8 @@ p, ul {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    background-color: var(--hero-button);
-    color: var(--portfolio-text-button);
+    background-color: var(--accent-color);
+    color: var(--hero-button);
     display: inline-block;
     border-radius: 4px;
     border: none;
@@ -299,8 +300,8 @@ p, ul {
 .hero-button:focus {
     font-family: 'Roboto';
     font-style: normal;
-    background-color: var(--accent-color);
-    color: var(--hero-button);
+    background-color: var(--hero-button);
+    color: var(--accent-color);
     font-size: 16px;
     border-radius: 4px;
 
@@ -325,6 +326,9 @@ p, ul {
     list-style: none;
     position: relative;
 }
+.features-element {
+    width: 270px;
+}
 .features-box {
     display: flex;
     align-items: center;
@@ -336,13 +340,6 @@ p, ul {
 
     border-radius: 4px;
     
-}
-.features-icon {
-fill: currentColor; 
-}
-.features-box:hover {
-    background-color: var(--accent-color);
-    color: var(--hero-button);
 }
 
 .features .features-element:last-child {
@@ -435,10 +432,7 @@ fill: currentColor;
 
 
 
-.command-img {
-    display: block;
-    
-}
+
 
 .command-title {
     font-weight: 700;
@@ -455,11 +449,23 @@ fill: currentColor;
     font-size: 16px;
     line-height: 1.18;
     text-decoration: none;
+    margin-bottom: 10px;
 
 }
 .command-p {
-    text-decoration: none;
     margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--portfolio-project-p);
+
+
+    text-decoration: none;
 }
 
 
@@ -467,16 +473,6 @@ fill: currentColor;
  
 }
 
-
-.norm {
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.norm:hover,
-.norm:focus {
-    background-color: var(--accent-color);
-    color: var(--hero-button);
-}
 
 
 .networks-list {
@@ -499,7 +495,8 @@ fill: currentColor;
 .networks-icon {
     fill: currentColor;
 }
-.networks-link:hover {
+.networks-link:hover,
+.networks-link:focus {
     background-color: var(--accent-color);
     color: var(--hero-button);
 }
@@ -548,6 +545,7 @@ fill: currentColor;
 
     border-radius: 4px;
     color: var(--icon-normal);
+    background-color: var(--hero-button);
     
 }
 .clients-icon {
@@ -556,8 +554,9 @@ fill: currentColor;
 
 .clients-link:hover,
 .clients-link:focus {
-    background-color: var(--accent-color);
-    color: var(--hero-button);
+    background-color: var(--hero-button);
+    outline: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 
@@ -570,12 +569,12 @@ fill: currentColor;
     ;
     color: var(--hero-button);
 }
-.footer-container {
+.footer-all {
     display: flex;
     align-items: baseline;
 }
 .footer-info {
-    display: block;
+    display: block
 }
 
 .footer-logo {
@@ -662,6 +661,9 @@ fill: currentColor;
     color: var(--accent-color);
     text-decoration: none;
     font-style: normal;
+}
+.footer {
+
 }
 
 .footer-box {
@@ -754,7 +756,7 @@ rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 .port-button {
 
     padding: 6px 22px;
-    min-width: 130px;
+    
 
     font-family: 'Roboto';
     font-style: normal;
@@ -762,7 +764,7 @@ rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
-    background-color: var(--hero-button);
+    background-color: var(--portfolio-button);
     color: var(--portfolio-text-button);
     border-radius: 4px;
     border: none;
@@ -770,6 +772,7 @@ rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .port-button:hover,
+.port-button:active,
 .port-button:focus {
     
     background-color: var(--accent-color);
